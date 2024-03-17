@@ -1,0 +1,34 @@
+div{
+    width: 0px;
+    aspect-ratio: 1/1;
+    border: 2px solid blue;
+    border-radius: 100px;
+    height: var(--height);
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+
+
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-name: my-animation;
+    animation-timing-function: linear;
+    animation-direction: initial;
+}
+
+@keyframes my-animation {
+    from{
+    }
+    to{
+        width: 200px;
+        aspect-ratio: 1/1;
+        border: 5px solid blue;
+        border-radius: 100px;
+        opacity: 0;
+
+    }
+}

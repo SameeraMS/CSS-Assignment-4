@@ -1,0 +1,43 @@
+:root{
+    --width: 300px;
+    --height: 100px;
+}
+div{
+    width: var(--width);
+    height: var(--height);
+    background-color: #ff7925;
+    border-radius: 20px;
+
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-name: my-animation;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes my-animation {
+    25%{
+        margin-top: 0;
+        margin-left: calc(100vw - var(--width));
+        background-color: #ff253a;
+        transform: rotate(180deg);
+    }
+    50%{
+        margin-left: calc(100vw - var(--width));
+        margin-top: calc(100vh - var(--height));
+        background-color: #00ff00;
+        transform: rotate(360deg);
+    }
+    75%{
+        margin-top: calc(100vh - var(--height));
+        margin-left: 0;
+        background-color: #0000ff;
+        transform: rotate(180deg);
+    }
+    100%{
+        margin-left: 0;
+        background-color: #ff253a;
+        transform: rotate(360deg);
+    }
+}
+

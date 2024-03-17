@@ -1,0 +1,64 @@
+main{
+    width: 50vw;
+    height: 50vh;
+    border: 5px solid red;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+
+    overflow: hidden;
+}
+
+section{
+    width: 200vw;
+    height: 50vh;
+    display: flex;
+
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-name: my-animation;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+div{
+    width: 50vw;
+    height: 50vh;
+    background-color: yellow;
+    background-size: cover;
+    background-position: center;
+}
+
+main>section>div:first-child{
+    background-image: url("/assets/images/slide1.jpeg");
+}
+main>section>div:nth-child(2){
+    background-image: url("/assets/images/slide2.jpeg");
+}
+main>section>div:nth-child(3){
+    background-image: url("/assets/images/slide3.jpeg");
+}
+main>section>div:nth-child(4){
+    background-image: url("/assets/images/slide4.jpeg");
+}
+
+
+@keyframes my-animation {
+
+    0%,10%{
+        transform: translateX(0);
+    }
+    30%,40%{
+        transform: translateX(-50vw);
+    }
+    60%,70%{
+        transform: translateX(-100vw);
+    }
+    90%,100%{
+        transform: translateX(-150vw);
+    }
+}
