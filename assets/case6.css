@@ -1,3 +1,7 @@
+body{
+    overflow: hidden;
+}
+
 #sky{
     height: 100vh;
     width: 100vw;
@@ -6,32 +10,78 @@
     position: relative;
 }
 
-section{
-    width: 100vw;
-    height: 70vh;
-    display: block;
+#city{
+    width: 200vw;
+    height: 35vh;
+    display: flex;
 
     position: absolute;
-    bottom: 0;
-    left: 0;
 
-    animation-duration: 4s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-name: my-animation;
     animation-timing-function: linear;
-    animation-direction: alternate;
+    animation-direction: initial;
 }
 
-section>div{
+#road{
+    width: 200vw;
+    height: 35vh;
+    display: flex;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: my-animation;
+    animation-timing-function: linear;
+    animation-direction: initial;
+}
+
+#city>div{
     width: 100vw;
     height: 35vh;
     background-size: cover;
     background-position: center;
 }
 
-section>div:first-child{
+#city>div:first-child{
     background-image: url("/assets/images/Car/city.png");
 }
-section>div:nth-child(2){
+#city>div:nth-child(2){
+    background-image: url("/assets/images/Car/city.png");
+}
+
+#road>div{
+    width: 100vw;
+    height: 35vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#road>div:first-child{
     background-image: url("/assets/images/Car/road.jpg");
+}
+#road>div:nth-child(2){
+    background-image: url("/assets/images/Car/road.jpg");
+}
+
+
+@keyframes my-animation{
+
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100vw);
+    }
+
 }
