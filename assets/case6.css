@@ -23,10 +23,10 @@ body{
     bottom: 0;
     margin: auto;
 
-    animation-duration: 2s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-name: my-animation;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
     animation-direction: initial;
 }
 
@@ -39,10 +39,10 @@ body{
     left: 0;
     bottom: 0;
 
-    animation-duration: 2s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-name: my-animation;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
     animation-direction: initial;
 }
 
@@ -74,6 +74,48 @@ body{
     background-image: url("/assets/images/Car/road.jpg");
 }
 
+#car{
+    background-image: url("/assets/images/Car/car.png");
+    background-size: cover;
+    background-position: center;
+
+    width: 20vw;
+    height: 15vh;
+    position: absolute;
+
+    top: 60vh;
+    left: 35vw;
+
+}
+
+#car>div{
+    width: 3.5vw;
+    height: 7vh;
+    position: absolute;
+
+    background-image: url("/assets/images/Car/wheel.png");
+    background-size: cover;
+    background-position: center;
+
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-name: tire-animation;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+}
+
+#car>div:first-child{
+    top: 66px;
+    left: 1.8vw;
+}
+
+#car>div:nth-child(2){
+    top: 66px;
+    left: 14vw;
+}
+
+
+
 
 @keyframes my-animation{
 
@@ -82,6 +124,18 @@ body{
     }
     to{
         transform: translateX(-100vw);
+    }
+
+}
+
+
+@keyframes tire-animation{
+
+    from{
+        transform: rotate(360deg);
+    }
+    to{
+        transform: rotate(0deg);
     }
 
 }
